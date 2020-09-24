@@ -3,11 +3,11 @@ class School
      @school_name = school_name
      @roster = {}
    end
- 
+
    def roster
      @roster
    end
- 
+
    def add_student(name, grade)
      @student_name = name
      @grade = grade
@@ -16,11 +16,11 @@ class School
      end
      @roster[grade] << name
    end
- 
+
    def grade(number)
      @roster[number]
    end
- 
+
    def sort
      @roster.each do |grade, name|
        @roster[grade] = name.sort
