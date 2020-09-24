@@ -1,17 +1,28 @@
 class School
-  attr_accessor :name, :roster
+ def initialize(name)
+   @name = name
+   @roster = {}
+ end
 
-  def initialize(name)
-    @name = name
-    @roster - {}
+ def roster
+   @roster
+ end
+
+ def add_student(name, grade)
+   @name = name
+   @grade = grade
+    if @roster.include?(grade) == false
+      @roster[grade] = []
+    end
+
+    def grade(class)
+      @roster[class]
+    end
+
+    def sort
+      @roster.each do |grade, name|
+        @roster[grade] = name.sort
+      end
+    end
   end
-
-  def sort
-  nu_hash = {}
-  roster.each do |x, y|
-    nu_hash[x] = y.sort
-  end
-  nu_hash
-end
-
-end 
+  
